@@ -1,0 +1,25 @@
+{% extends 'notification_app/base.html' %}
+
+{% block content %}
+<style>
+    body{
+        background-color: aliceblue;
+}
+</style>
+<h1>Notifications</h1>
+<ul>
+    {% for notification in notifications %}
+    <li>
+        <a href="{% url 'notification-retrieve-update' notification.id %}">
+            {% if not notification.read %}
+            <strong>{{ notification.message }}</strong>
+            {% else %}
+            {{ notification.message }}
+            {% endif %}
+        </a>
+    </li>
+    {% empty %}
+    <li>No notifications found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

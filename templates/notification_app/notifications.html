@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+</head>
+<body>
+    <h1>Real-Time Notifications</h1>
+    <div id="notifications"></div>
+
+    <script>
+        const notificationsDiv = document.getElementById('notifications');
+        const userId = YOUR_USER_ID;  // Replace with the actual user ID or fetch it dynamically
+
+        const socket = new WebSocket(`ws://localhost:8000/ws/notifications/`);
+
+        socket.onopen = function() {
+            console.log('WebSocket connection established');
+        };
+
+        socket.onmessage = function(event) {
+            const data = JSON.parse(event.data);
+            const message = data.message;
+            const notificationItem = document.createElement('div');
+            notificationItem.textContent = message;
+            notificationsDiv.appendChild(notificationItem);
+        };
+
+        socket.onclose = function(event) {
+            console.log('WebSocket connection closed', event);
+        };
+    </script>
+</body>
+</html>

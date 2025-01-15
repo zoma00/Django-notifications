@@ -1,0 +1,18 @@
+{% extends 'notification_app/base.html' %}
+
+{% load static %}  <!-- Load the static template tag -->
+
+{% block content %}
+    <h1>Notification Details</h1>
+    <p>Message: {{ notification.message }}</p>
+    <p>Read: {% if notification.read %}Yes{% else %}No{% endif %}</p>
+    <p>Created at: {{ notification.created_at }}</p>
+    <p>User: {{ notification.user.username }}</p>  <!-- Displaying the username -->
+
+    <h2>Real-Time Notifications</h2>
+    <div id="notifications"></div>  <!-- Div to display real-time notifications -->
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/websocket.js' %}"></script>
+{% endblock %}

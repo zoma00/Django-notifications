@@ -1,0 +1,2 @@
+user: lenovo
+pass:zoz1234
