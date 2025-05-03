@@ -1,9 +1,16 @@
 <div>
-
-<p align="center">
+<p align="left">
   <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
     <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
   </a>
+</div>
+<div>
+
+<p align="center">
+  <a href="https://websockets.readthedocs.io/en/stable/" target="_blank">
+    <img src="websockets.webp" width="200" alt="woocommerce- Logo">
+      Web Sockets Documentation  </a>
+</p>
 </div>
 
 
