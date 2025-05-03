@@ -1,3 +1,12 @@
+<div>
+
+<p align="center">
+  <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
+    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
+  </a>
+</div>
+
+
 # Django Notifications App
 
 This project demonstrates how to implement a robust notifications system in Django, including real-time notifications using WebSockets with Django Channels and Redis.
