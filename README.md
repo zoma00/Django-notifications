@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://websockets.readthedocs.io/en/stable/" target="_blank">
     <img src="websockets.webp" width="200" alt="woocommerce- Logo">
-      Web Sockets Documentation  </a>
+     </a>
 </p>
 </div>
 
