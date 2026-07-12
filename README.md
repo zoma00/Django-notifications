@@ -1,18 +1,6 @@
-<div>
-<p align="left">
-  <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
-    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
-  </a>
-</div>
-<div>
-
-<p align="center">
-  <a href="https://websockets.readthedocs.io/en/stable/" target="_blank">
-    <img src="websockets.webp" width="200" alt="woocommerce- Logo">
-     </a>
-</p>
-</div>
-
+![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)
+![Django Channels](https://img.shields.io/badge/Django_Channels-092E20?logo=django&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-010101?logo=socketdotio&logoColor=white)
 
 # Django Notifications App
 
