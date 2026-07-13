@@ -1,3 +1,4 @@
+![CI](https://github.com/zoma00/Django-notifications/actions/workflows/ci.yml/badge.svg)
 ![Django](https://img.shields.io/badge/Django-092E20?logo=django&logoColor=white)
 ![Django Channels](https://img.shields.io/badge/Django_Channels-092E20?logo=django&logoColor=white)
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?logo=socketdotio&logoColor=white)
