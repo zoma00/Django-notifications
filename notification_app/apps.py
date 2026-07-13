@@ -8,4 +8,4 @@ class NotificationAppConfig(AppConfig):
     # noinspection PyUnresolvedReferences
 
     def ready(self):
-        import notification_app.signals     # Ensures signals are registered
+        pass     # Ensures signals are registered
