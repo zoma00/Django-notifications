@@ -4,12 +4,12 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from faker import Faker
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .models import Notification
 from .serializers import NotificationSerializer
 from channels.layers import get_channel_layer
 from asgiref.sync import async_to_sync
-import json
 from django.shortcuts import render
 
 def notifications_page(request):
@@ -17,6 +17,8 @@ def notifications_page(request):
 class NotificationViewSet (viewsets.ModelViewSet):
     queryset = Notification.objects.all ()
     serializer_class = NotificationSerializer
+    # Every action below assumes an authenticated request.user
+    permission_classes = [IsAuthenticated]
 
     def list (self, request, *args, **kwargs):
         user = request.user
@@ -101,8 +103,6 @@ class NotificationViewSet (viewsets.ModelViewSet):
 
         return JsonResponse ({"message": "Notification created and sent in real-time!"})
 
-import json
-from channels.generic.websocket import AsyncWebsocketConsumer
 
 
 r"""
