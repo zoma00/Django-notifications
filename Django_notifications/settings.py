@@ -22,10 +22,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-1w$(0-xgu3*ag%=g(6(lp-8f=!e$-&bqjum5t5af6@3t63ka99"
+# The insecure default is for local development only; set SECRET_KEY in
+# the environment for any deployed instance.
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", "django-insecure-dev-only-key-do-not-use-in-production"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "1") == "1"
 
 ALLOWED_HOSTS = []
 
