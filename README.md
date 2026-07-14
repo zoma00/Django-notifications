@@ -22,15 +22,24 @@ This project demonstrates how to implement a robust notifications system in Djan
 
 ## Table of Contents
 
-1. [Prerequisites](#prerequisites)
-2. [Installation](#installation)
-3. [Configuration](#configuration)
-4. [Database Model](#database-model)
-5. [Real-Time Notifications](#real-time-notifications)
-6. [Batch Notifications](#batch-notifications)
-7. [API Endpoints](#api-endpoints)
-8. [Testing and Monitoring](#testing-and-monitoring)
-9. [License](#license)
+1. [Architecture](#architecture)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Configuration](#configuration)
+5. [Database Model](#database-model)
+6. [Real-Time Notifications](#real-time-notifications)
+7. [Batch Notifications](#batch-notifications)
+8. [API Endpoints](#api-endpoints)
+9. [Testing and Monitoring](#testing-and-monitoring)
+10. [License](#license)
+
+---
+
+## Architecture
+
+<p align="center">
+  <img src="docs/application-flow.svg" width="100%" alt="Django Notifications flow from authenticated HTTP and WebSocket clients through DRF viewsets, caching, notification persistence, Channels real-time delivery, and Celery batch processing with Redis">
+</p>
 
 ---
 
